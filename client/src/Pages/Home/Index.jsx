@@ -3,14 +3,47 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './Index.scss'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
+import toast, { Toaster } from "react-hot-toast";
 
-function Index() {
+function Index({wishList, setWishList}) {
     let [services, setServices] = useState([])
+    let [toggle, setToggle] = useState(true)
 
+function addToWishList(obj){
+    if(!wishList.find((x)=>x._id===obj._id)){
+        setWishList([...wishList, obj])
+        toast.success("Succesfully added!")
+    }else{
+        toast.error('You have added!')
+    }
+}
+    function sortData(obj){
+        setToggle(!toggle)
+        if(toggle){
+            let sortedData = obj.sort((a, b)=> a.price-b.price)
+            setServices([...sortedData])
+        }else{
+            let unSortedData = obj.sort((a, b)=>b.price-a.price)
+            setServices([...unSortedData])
+        }
+    }
+    function getData(){
+        axios.get("http://localhost:8080/api/services").then((res) => {
+            setServices(res.data);
+        });
+    }
+    
     useEffect(()=>{
-        axios.get("http://localhost:8080/api/services").then((res)=>{setServices(res.data)})
+        getData()
     },[])
-
+    
+    function searchData(e){
+        axios.get("http://localhost:8080/api/services").then((res)=>{
+            let search = res.data.filter((x)=>x.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))
+            setServices(search)
+        })
+    }
     console.log(services);
   return (
     <>
@@ -32,12 +65,36 @@ function Index() {
       </section>
 
       <section className="bestServices">
+        <Toaster position="top-center" reverseOrder={false} />
         <div className="bestServices__container">
           <div className="bestServices__container__header">
             <span className="line"></span>
             <span>OUR TOP SERVICES</span>
           </div>
           <h2>Our Best Services</h2>
+          <input
+            type="text"
+            placeholder="Search by name"
+            style={{ padding: "10px", borderRadius: "10px" }}
+            onChange={(e) => {
+              searchData(e);
+            }}
+          />
+          <button
+            onClick={() => {
+              sortData(services);
+              toast.success("Successfully sorted!");
+            }}
+            style={{
+              padding: "10px",
+              borderRadius: "10px",
+              backgroundColor: "pink",
+              marginLeft: "20px",
+              cursor: "pointer",
+            }}
+          >
+            Sort by price
+          </button>
 
           <div className="bestServices__container__cards">
             {services.map((service, index) => {
@@ -53,9 +110,31 @@ function Index() {
                     {"$"} {service.price}
                   </p>
                   <div className="cardBtns">
-                    <button>Details</button>
-                    <button>Delete</button>
-                    <button>Add to WishList</button>
+                    <Link to={`/details/${service._id}`}>
+                      <button>Details</button>
+                    </Link>
+                    <button
+                      onClick={() => {
+                        if (
+                          window.confirm("Are you sure you want to delete?")
+                        ) {
+                          axios
+                            .delete(
+                              `http://localhost:8080/api/services/${service._id}`
+                            )
+                            .then((res) => getData());
+                        }
+                      }}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      onClick={() => {
+                        addToWishList(service);
+                      }}
+                    >
+                      Add to WishList
+                    </button>
                   </div>
                 </div>
               );
@@ -187,7 +266,7 @@ function Index() {
             </div>
             <div className="TeamMembers__container__cards__card">
               <img
-                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team3.png"
                 alt=""
               />
               <h5>Ethan Welch</h5>
@@ -198,7 +277,7 @@ function Index() {
             </div>
             <div className="TeamMembers__container__cards__card">
               <img
-                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team1.png"
                 alt=""
               />
               <h5>Ethan Welch</h5>

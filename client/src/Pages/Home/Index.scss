@@ -70,6 +70,7 @@
 .bestServices {
   width: 100%;
   background-color: rgb(247, 247, 247);
+  margin-bottom: 200px;
   &__container {
     width: 1140px;
     margin: 0 auto;
@@ -120,6 +121,9 @@
         justify-content: space-around;
         display: flex;
         img {
+            width: 81px;
+            height: 81px;
+            border-radius: 50%;
         }
         h4 {
           line-height: 28px;
@@ -303,6 +307,7 @@
           height: 150px;
           background-color: white;
           position: absolute;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           top: 310px;
           display: flex;
           flex-direction: column;
@@ -344,8 +349,7 @@
   width: 100%;
   padding-top: 140px;
   background-color: rgb(247, 247, 247);
-  height: 100vh;
-
+    margin-bottom: 100px;
   &__container {
     width: 1140px;
     margin: 0 auto;
@@ -390,6 +394,12 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            img{
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
             h5{
                 font-size: 25px;
                 line-height: 30px;

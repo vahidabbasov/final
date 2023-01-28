@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Index.scss'
-function Index() {
+function Index({wishList, setWishList}) {
   return (
     <header>
       <nav>
@@ -19,13 +19,13 @@ function Index() {
               </Link>
             </li>
             <li>
-              <Link to={"/"} className="link">
-                About
+              <Link to={"/AddPage"} className="link">
+                AddPage
               </Link>
             </li>
-            <li>
-              <Link to={"/"} className="link">
-                Services
+            <li style={{position:"relative"}}>
+              <Link to={"/WishList"} className="link">
+                WishList <div style={{position:"absolute", backgroundColor:"red", borderRadius:"50%", width:"20px",     height:"20px", display:"flex", justifyContent:"center", alignItems:"center", color:"white", left:"80px", top:"-14px"}}>{wishList.length}</div>
               </Link>
             </li>
             <li>
