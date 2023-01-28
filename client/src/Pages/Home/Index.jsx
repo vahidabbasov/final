@@ -78,12 +78,12 @@ function Index() {
               <span>OUR TOP SERVICES</span>
             </div>
             <h2>Our Best Services</h2>
-            <p className='first'>
+            <p className="first">
               Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess
               cillum dolore egru lofrre dsu quality mollit anim laborumuis au
               dolor in voluptate velit cillu.
             </p>
-            <p className='last'>
+            <p className="last">
               Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re
               voluptate velit esscillumlore eu quife nrulla parihatur.
               Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
@@ -94,7 +94,122 @@ function Index() {
         </div>
       </section>
 
-      <section></section>
+      <section className="CaseStudy">
+        <div className="CaseStudy__container">
+          <div className="CaseStudy__container__header">
+            <span className="line"></span>
+            <span>OUR PORTFOLIOS OF CASES</span>
+          </div>
+          <h1>Featured Case Study</h1>
+          <div className="CaseStudy__container__cards">
+            <div className="CaseStudy__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                alt=""
+              />
+              <div className="CaseStudy__container__cards__card__footer">
+                <div className="CaseStudy__container__cards__card__footer__title">
+                  <span className="line"></span>
+                  <span>Strategy planing</span>
+                </div>
+                <div className="CaseStudy__container__cards__card__footer__text">
+                  Within the construction industry as their overdraft
+                </div>
+              </div>
+            </div>
+            <div className="CaseStudy__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                alt=""
+              />
+              <div className="CaseStudy__container__cards__card__footer">
+                <div className="CaseStudy__container__cards__card__footer__title">
+                  <span className="line"></span>
+                  <span>Strategy planing</span>
+                </div>
+                <div className="CaseStudy__container__cards__card__footer__text">
+                  Within the construction industry as their overdraft
+                </div>
+              </div>
+            </div>
+            <div className="CaseStudy__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                alt=""
+              />
+              <div className="CaseStudy__container__cards__card__footer">
+                <div className="CaseStudy__container__cards__card__footer__title">
+                  <span className="line"></span>
+                  <span>Strategy planing</span>
+                </div>
+                <div className="CaseStudy__container__cards__card__footer__text">
+                  Within the construction industry as their overdraft
+                </div>
+              </div>
+            </div>
+            <div className="CaseStudy__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                alt=""
+              />
+              <div className="CaseStudy__container__cards__card__footer">
+                <div className="CaseStudy__container__cards__card__footer__title">
+                  <span className="line"></span>
+                  <span>Strategy planing</span>
+                </div>
+                <div className="CaseStudy__container__cards__card__footer__text">
+                  Within the construction industry as their overdraft
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="TeamMembers">
+        <div className="TeamMembers__container">
+          <div className="TeamMembers__container__header">
+            <span className="line"></span>
+            <span>OUR PROFESSIONAL MEMBERS</span>
+          </div>
+          <h2>Our Team Members</h2>
+          <div className="TeamMembers__container__cards">
+            <div className="TeamMembers__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
+                alt=""
+              />
+              <h5>Ethan Welch</h5>
+              <div className="TeamMembers__container__cards__card__footer">
+                <span className="line"></span>
+                <p>UX Designer</p>
+              </div>
+            </div>
+            <div className="TeamMembers__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
+                alt=""
+              />
+              <h5>Ethan Welch</h5>
+              <div className="TeamMembers__container__cards__card__footer">
+                <span className="line"></span>
+                <p>UX Designer</p>
+              </div>
+            </div>
+            <div className="TeamMembers__container__cards__card">
+              <img
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/team2.png"
+                alt=""
+              />
+              <h5>Ethan Welch</h5>
+              <div className="TeamMembers__container__cards__card__footer">
+                <span className="line"></span>
+                <p>UX Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
