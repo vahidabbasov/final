@@ -120,6 +120,10 @@
         background-color: white;
         justify-content: space-around;
         display: flex;
+        transition: 1s;
+        &:hover{
+            background-color: pink;
+        }
         img {
             width: 81px;
             height: 81px;

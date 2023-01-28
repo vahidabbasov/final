@@ -16,10 +16,18 @@ function Index() {
           <span style={{ color: "red", marginLeft: "10px" }}>Colorlib</span>
         </div>
         <div className="right">
-          <AiFillTwitterCircle style={{ color: "white", marginLeft: "10px" }} />
-          <BsFacebook style={{ color: "white", marginLeft: "10px" }} />
-          <TbWorld style={{ color: "white", marginLeft: "10px" }} />
-          <AiFillInstagram style={{ color: "white", marginLeft: "10px" }} />
+          <AiFillTwitterCircle
+            style={{ color: "white", marginLeft: "10px", cursor: "pointer" }}
+          />
+          <BsFacebook
+            style={{ color: "white", marginLeft: "10px", cursor: "pointer" }}
+          />
+          <TbWorld
+            style={{ color: "white", marginLeft: "10px", cursor: "pointer" }}
+          />
+          <AiFillInstagram
+            style={{ color: "white", marginLeft: "10px", cursor: "pointer" }}
+          />
         </div>
       </div>
     </footer>

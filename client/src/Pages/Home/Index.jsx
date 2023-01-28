@@ -65,8 +65,6 @@ function addToWishList(obj){
       </Helmet>
       <section className="growBusinessSection">
         <div className="growBusinessSection__container">
-          
-
           <div className="growBusinessSection__container__header">
             <span className="line"></span>
             <span>COMMITED TO SUCCESS</span>
@@ -216,7 +214,7 @@ function addToWishList(obj){
             </div>
             <div className="CaseStudy__container__cards__card">
               <img
-                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services2.png"
                 alt=""
               />
               <div className="CaseStudy__container__cards__card__footer">
@@ -231,7 +229,7 @@ function addToWishList(obj){
             </div>
             <div className="CaseStudy__container__cards__card">
               <img
-                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services3.png"
                 alt=""
               />
               <div className="CaseStudy__container__cards__card__footer">
@@ -246,7 +244,7 @@ function addToWishList(obj){
             </div>
             <div className="CaseStudy__container__cards__card">
               <img
-                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services1.png.webp"
+                src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/services4.png"
                 alt=""
               />
               <div className="CaseStudy__container__cards__card__footer">
