@@ -67,7 +67,10 @@ function Index() {
       <section className="OurBestServices">
         <div className="OurBestServices__container">
           <div className="left">
-            <img src="" alt="" />
+            <img
+              src="https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/about.png.webp"
+              alt=""
+            />
           </div>
           <div className="right">
             <div className="right__header">
@@ -75,12 +78,12 @@ function Index() {
               <span>OUR TOP SERVICES</span>
             </div>
             <h2>Our Best Services</h2>
-            <p>
+            <p className='first'>
               Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess
               cillum dolore egru lofrre dsu quality mollit anim laborumuis au
               dolor in voluptate velit cillu.
             </p>
-            <p>
+            <p className='last'>
               Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re
               voluptate velit esscillumlore eu quife nrulla parihatur.
               Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
@@ -90,6 +93,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <section></section>
     </>
   );
 }
