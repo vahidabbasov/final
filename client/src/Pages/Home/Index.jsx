@@ -4,10 +4,22 @@ import { useState } from 'react';
 import './Index.scss'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
 import toast, { Toaster } from "react-hot-toast";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Helmet } from "react-helmet";
 
 function Index({wishList, setWishList}) {
+    const settings = {
+      dots: true,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 2,
+    };
     let [services, setServices] = useState([])
     let [toggle, setToggle] = useState(true)
 
@@ -53,6 +65,8 @@ function addToWishList(obj){
       </Helmet>
       <section className="growBusinessSection">
         <div className="growBusinessSection__container">
+          
+
           <div className="growBusinessSection__container__header">
             <span className="line"></span>
             <span>COMMITED TO SUCCESS</span>
