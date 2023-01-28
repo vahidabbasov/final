@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Menu, Dropdown } from "antd";
 import './Index.scss'
 function Index({wishList, setWishList}) {
   return (
@@ -20,7 +21,7 @@ function Index({wishList, setWishList}) {
                 Home
               </Link>
             </li>
-            <li>
+            <li >
               <Link to={"/AddPage"} className="link">
                 AddPage
               </Link>
@@ -47,9 +48,31 @@ function Index({wishList, setWishList}) {
                 </div>
               </Link>
             </li>
-            <li>
-              <Link to={"/"} className="link">
-                Blog
+            <li style={{marginLeft:"22px"}}>
+              <Link to={"/"} className="link dropdown">
+                <Dropdown style
+                  overlay={
+                    <Menu style={{ backgroundColor: "0D2D3E", color: "white",  }}>
+                      <Menu.Item style={{ color: "white" }} key="0">
+                        Blog
+                      </Menu.Item>
+                      <Menu.Item style={{ color: "white" }} key="1">
+                        Blog Details
+                      </Menu.Item>
+                      <Menu.Item style={{ color: "white" }} key="1">
+                        Element
+                      </Menu.Item>
+                    </Menu>
+                  }
+                  trigger={["hover"]}
+                >
+                  <li
+                    className="ant-dropdown-link"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Blog
+                  </li>
+                </Dropdown>
               </Link>
             </li>
             <li>
