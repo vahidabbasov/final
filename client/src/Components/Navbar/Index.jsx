@@ -52,7 +52,7 @@ function Index({wishList, setWishList}) {
               <Link to={"/"} className="link dropdown">
                 <Dropdown style
                   overlay={
-                    <Menu style={{ backgroundColor: "0D2D3E", color: "white",  }}>
+                    <Menu style={{ backgroundColor: "#0D2D3E", color: "white",  }}>
                       <Menu.Item style={{ color: "white" }} key="0">
                         Blog
                       </Menu.Item>
