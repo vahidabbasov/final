@@ -1,0 +1,157 @@
+.growBusinessSection {
+  width: 100%;
+  background-image: url("https://preview.colorlib.com/theme/consultingbiz/assets/img/hero/h1_hero.jpg.webp");
+  background-size: cover;
+  height: 100vh;
+  &__container {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    &__header {
+      display: flex;
+      align-items: center;
+      span:last-child {
+        color: #eb566c;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        font-family: Roboto Bold Roboto Thin Roboto Slab Roboto Light Roboto
+          Black;
+      }
+    }
+    .line {
+      width: 50px;
+      height: 2px;
+      font-size: 18px;
+      background-color: #eb566c;
+      font-weight: 500;
+      margin-right: 30px;
+    }
+
+    h1{
+        font-size: 85px;
+        font-weight: 800;
+        line-height: 102px;
+        width: 800px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p{
+        line-height: 30px;
+        font-weight: 400;
+        color: black;
+        width: 500px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    button{
+        
+        color: white;
+        background-color: RGB(255, 33, 67);
+        transition: 1s;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        width: 200px;
+        margin-top: 40px;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+  }
+}
+
+.bestServices{
+    width: 100%;
+    background-color: rgb(247,247,247);
+    &__container{
+        width: 1140px;
+        margin: 0 auto;
+        padding-top: 120px;
+        &__header{
+            display: flex;
+            align-items: center;
+
+            .line{
+                display: block;
+                width: 60px;
+                margin-right: 20px;
+                height: 2px;
+                background-color: #EB566C;
+            }
+            span:last-child{
+                color:RGB(235, 86, 108) ;
+                font-size: 18px;
+                line-height: 27px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 500;
+            }
+        }
+        h2{
+            line-height: 60px;
+            font-size: 50px;
+            color: #092C3F;
+            font-weight: 900;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        &__cards{
+            width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            &__card{
+                width: 350px;
+                height: 320px;
+                margin-top: 50px;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                justify-content: space-around;
+                display: flex;
+                img{
+
+                }
+                h4{
+                    line-height: 28px;
+                    font-weight: 600;
+                    font-size: 24px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                p{
+                    line-height: 30px;
+                    font-weight: 400;
+                    text-align: center;
+                    color: grey;
+                    width: 300px;
+                }
+                .price{
+                    color: black;
+                    font-weight: 700;
+                }
+                .cardBtns{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 350px;
+                    button{
+                        background-color: #EB566C;
+                        color: white;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 8px;
+                        transition: 1s;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: #e796a2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
