@@ -5,6 +5,7 @@ import './Index.scss'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function Index({wishList, setWishList}) {
     let [services, setServices] = useState([])
@@ -47,6 +48,9 @@ function addToWishList(obj){
     console.log(services);
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <section className="growBusinessSection">
         <div className="growBusinessSection__container">
           <div className="growBusinessSection__container__header">

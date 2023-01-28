@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import './Index.scss'
 import axios from "axios";
+import { Helmet } from "react-helmet";
 function Index() {
   const SignupSchema = Yup.object().shape({
     name: Yup.string()
@@ -18,6 +19,9 @@ function Index() {
   });
   return (
     <div className="addPageContainer">
+      <Helmet>
+        <title>AddPage</title>
+      </Helmet>
       <h1>Add New Service</h1>
       <Formik
         initialValues={{

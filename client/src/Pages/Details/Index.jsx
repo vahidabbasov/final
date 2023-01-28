@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useNavigate, useParams } from 'react-router-dom'
 import './Index.scss'
 
@@ -19,6 +20,9 @@ let navigate = useNavigate()
     console.log(service);
   return (
     <div className="detailsContainer">
+      <Helmet>
+        <title>Details</title>
+      </Helmet>
       <div className="card">
         <img src={`${service.img}`} alt="" />
         <h3>
@@ -32,17 +36,27 @@ let navigate = useNavigate()
         </p>
       </div>
       <div className="btns">
-        <button onClick={()=>{
-            navigate('/')
-        }}>GO BACK</button>
-        <button onClick={()=>{
-            if(window.confirm('Are you sure?')){
-                
-axios.delete(`http://localhost:8080/api/services/${service._id}`).then((res)=>{getData()
-navigate("/");})
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          GO BACK
+        </button>
+        <button
+          onClick={() => {
+            if (window.confirm("Are you sure?")) {
+              axios
+                .delete(`http://localhost:8080/api/services/${service._id}`)
+                .then((res) => {
+                  getData();
+                  navigate("/");
+                });
             }
-            
-        }}>DELETE</button>
+          }}
+        >
+          DELETE
+        </button>
       </div>
     </div>
   );
