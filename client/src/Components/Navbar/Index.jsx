@@ -6,10 +6,12 @@ function Index({wishList, setWishList}) {
     <header>
       <nav>
         <div className="left">
-          <img
-            src="https://preview.colorlib.com/theme/consultingbiz/assets/img/logo/logo.png.webp"
-            alt=""
-          />
+          <Link to={"/"}>
+            <img
+              src="https://preview.colorlib.com/theme/consultingbiz/assets/img/logo/logo.png.webp"
+              alt=""
+            />
+          </Link>
         </div>
         <div className="right">
           <ul>
@@ -23,9 +25,26 @@ function Index({wishList, setWishList}) {
                 AddPage
               </Link>
             </li>
-            <li style={{position:"relative"}}>
+            <li style={{ position: "relative" }}>
               <Link to={"/WishList"} className="link">
-                WishList <div style={{position:"absolute", backgroundColor:"red", borderRadius:"50%", width:"20px",     height:"20px", display:"flex", justifyContent:"center", alignItems:"center", color:"white", left:"80px", top:"-14px"}}>{wishList.length}</div>
+                WishList{" "}
+                <div
+                  style={{
+                    position: "absolute",
+                    backgroundColor: "red",
+                    borderRadius: "50%",
+                    width: "20px",
+                    height: "20px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "white",
+                    left: "80px",
+                    top: "-14px",
+                  }}
+                >
+                  {wishList.length}
+                </div>
               </Link>
             </li>
             <li>

@@ -17,7 +17,7 @@ function Index({wishList, setWishList}) {
         <title>WishList</title>
       </Helmet>
       <Toaster position="top-center" reverseOrder={false} />
-      {wishList.length === 0 && <h1>No items left...</h1>}
+      {wishList.length === 0 && <h1>No items yet...</h1>}
       {wishList.length !== 0 && (
         <button
           style={{

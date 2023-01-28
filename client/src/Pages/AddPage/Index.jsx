@@ -50,7 +50,7 @@ function Index() {
             ) : null}
             <Field
               name="img"
-              placeholder="Src for IMG"
+              placeholder="Src for IMG (URL)"
               type="text"
               className="input"
             />
